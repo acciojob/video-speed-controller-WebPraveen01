@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -17,5 +17,97 @@
 <script  src="./script.js">
   //Your code goes here
 </script>
+</body>
+</html>
+
+ -->
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Video Player</title>
+    <style>
+        /* Basic styles for the video player */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+
+        .video-container {
+            position: relative;
+            max-width: 800px;
+            margin: auto;
+            background: black;
+        }
+
+        video {
+            width: 100%;
+            display: block;
+        }
+
+        .controls {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+        }
+
+        .controls button, .controls input {
+            margin: 0 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .progress-container {
+            width: 100%;
+            height: 5px;
+            background-color: #ccc;
+            margin: 10px 0;
+            position: relative;
+        }
+
+        .progress__filled {
+            height: 100%;
+            background-color: #f00;
+            width: 0%;
+        }
+
+        .volume, .speed {
+            width: 80px;
+        }
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <video id="video" src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"></video>
+        <div class="controls">
+            <!-- Play/Pause Button -->
+            <button id="playPauseBtn">►</button>
+
+            <!-- Rewind 10s Button -->
+            <button id="rewindBtn">« 10s</button>
+
+            <!-- Skip 25s Button -->
+            <button id="skipBtn">25s »</button>
+
+            <!-- Progress Bar -->
+            <div class="progress-container">
+                <div class="progress__filled" id="progress"></div>
+            </div>
+
+            <!-- Volume Control -->
+            Volume: <input type="range" id="volume" class="volume" min="0" max="1" step="0.01" value="1">
+
+            <!-- Playback Speed Control -->
+            Speed: <input type="range" id="speed" class="speed" min="0.5" max="2" step="0.1" value="1">
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
