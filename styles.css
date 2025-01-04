@@ -1,2 +1,82 @@
 
 /* Your CSS Code here. */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+  color: white;
+}
+
+.player-wrapper {
+  position: relative;
+  width: 765px;
+  height: 430px;
+  margin: 0 auto;
+  background-color: black;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+}
+
+.controls {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.player__button {
+  font-size: 24px;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.progress-container {
+  width: 60%;
+  height: 10px;
+  background: #ccc;
+  margin: 0 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.progress {
+  width: 100%;
+  height: 100%;
+}
+
+.progress__filled {
+  width: 0%;
+  height: 100%;
+  background-color: #ff6347;
+  border-radius: 5px;
+}
+
+.skip-button {
+  font-size: 16px;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.controls__input {
+  width: 100px;
+  margin: 0 10px;
+}
+
+.speed-label {
+  font-size: 16px;
+  color: white;
+}
