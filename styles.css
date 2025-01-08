@@ -1,82 +1,87 @@
-
-/* Your CSS Code here. */
-
-body {
-  font-family: Arial, sans-serif;
+/* Reset some default styles */
+* {
   margin: 0;
   padding: 0;
-  background-color: #333;
-  color: white;
+  box-sizing: border-box;
 }
 
-.player-wrapper {
-  position: relative;
-  width: 765px;
-  height: 430px;
-  margin: 0 auto;
-  background-color: black;
-}
-
-.video {
-  width: 100%;
-  height: 100%;
-}
-
-.controls {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+/* Full page view for the player */
+body {
   display: flex;
+  justify-content: center;
   align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.player {
+  position: relative;
+  width: 800px;
+  background-color: #000;
+}
+
+.player__video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Player controls */
+.player__controls {
+  display: flex;
   justify-content: space-between;
-  width: 90%;
+  align-items: center;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .player__button {
-  font-size: 24px;
   background: none;
-  color: white;
   border: none;
+  color: white;
+  font-size: 1.5rem;
   cursor: pointer;
 }
 
-.progress-container {
-  width: 60%;
-  height: 10px;
-  background: #ccc;
-  margin: 0 10px;
-  border-radius: 5px;
-  cursor: pointer;
+.player__button:focus {
+  outline: none;
+}
+
+.player__slider {
+  width: 100px;
 }
 
 .progress {
   width: 100%;
-  height: 100%;
+  height: 5px;
+  background-color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  position: relative;
+  flex-grow: 1;
 }
 
 .progress__filled {
-  width: 0%;
+  width: 0;
   height: 100%;
   background-color: #ff6347;
-  border-radius: 5px;
 }
 
-.skip-button {
-  font-size: 16px;
-  background: none;
+/* Style for the toggle button */
+.toggle {
+  font-size: 2rem;
   color: white;
-  border: none;
+}
+
+/* Style for the range sliders */
+.player__slider {
+  margin: 0 10px;
   cursor: pointer;
-  margin: 0 10px;
 }
 
-.controls__input {
-  width: 100px;
-  margin: 0 10px;
+.player__slider::-webkit-slider-thumb {
+  background-color: #ff6347;
 }
 
-.speed-label {
-  font-size: 16px;
-  color: white;
+.player__slider::-moz-range-thumb {
+  background-color: #ff6347;
 }
